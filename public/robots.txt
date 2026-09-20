@@ -1,0 +1,3 @@
+User-Agent: *
+Allow: /
+Sitemap: https://urebarif.com/sitemap.xml
