@@ -1,44 +1,115 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------ */
+/*  Design System — Ureb Arif Personal Brand                          */
+/*  Palette: Deep navy + warm gold + emerald success                  */
+/*  Tailwind CSS v4 — @theme inline tokens                            */
+/* ------------------------------------------------------------------ */
+
 @theme inline {
+  /* --- Primary / Foreground ---------------------------------------- */
+  --color-foreground: #0f172a;          /* deep navy — headings, body  */
+  --color-foreground-secondary: #1e293b; /* slightly lighter navy      */
+
+  /* --- Background -------------------------------------------------- */
   --color-background: #ffffff;
-  --color-foreground: #0a0a0a;
-  --color-accent: #b8860b;
-  --color-accent-hover: #9a7209;
-  --color-accent-light: #f5ecd7;
-  --color-muted: #6b7280;
-  --color-border: #e5e7eb;
-  --color-surface: #f9fafb;
+  --color-background-warm: #fafaf8;     /* warm off-white sections     */
+
+  /* --- Accent — warm gold ------------------------------------------ */
+  --color-accent: #c9963b;             /* refined warm gold            */
+  --color-accent-hover: #b07e2a;       /* pressed / hover state        */
+  --color-accent-light: #faf3e6;       /* tinted background            */
+  --color-accent-muted: #e8d5a8;       /* borders with accent feel     */
+
+  /* --- Success / secondary accent — emerald ------------------------ */
+  --color-success: #059669;
+  --color-success-light: #ecfdf5;
+
+  /* --- Muted text hierarchy ---------------------------------------- */
+  --color-muted: #64748b;             /* body secondary text           */
+  --color-muted-light: #94a3b8;       /* captions, timestamps          */
+  --color-muted-foreground: #475569;  /* slightly bolder muted         */
+
+  /* --- Borders ----------------------------------------------------- */
+  --color-border: #e2e8f0;            /* default, cool-neutral         */
+  --color-border-light: #f1f5f9;      /* very subtle dividers          */
+  --color-border-strong: #cbd5e1;     /* emphasized borders            */
+
+  /* --- Surfaces ---------------------------------------------------- */
+  --color-surface: #f8fafc;           /* card backgrounds              */
+  --color-surface-warm: #fafaf8;      /* warm-tinted surfaces          */
+  --color-surface-elevated: #ffffff;  /* modals, popovers              */
+
+  /* --- Typography -------------------------------------------------- */
   --font-sans: var(--font-inter);
   --font-heading: var(--font-jakarta);
 }
 
+/* ------------------------------------------------------------------ */
+/*  CSS Custom Properties (non-Tailwind, for gradients & effects)      */
+/* ------------------------------------------------------------------ */
+:root {
+  --gradient-brand: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  --gradient-accent: linear-gradient(135deg, #c9963b 0%, #e8c06a 50%, #c9963b 100%);
+  --gradient-hero: linear-gradient(180deg, #ffffff 0%, #fafaf8 100%);
+  --gradient-surface: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  --gradient-cta: linear-gradient(135deg, #0f172a 0%, #1a2744 100%);
+  --gradient-gold-text: linear-gradient(135deg, #c9963b, #e8c06a, #c9963b);
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.06), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-gold: 0 4px 14px rgba(201, 150, 59, 0.15);
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
+  --shadow-card-hover: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 4px 10px rgba(15, 23, 42, 0.03);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  /* subtle warm-to-white gradient across the entire page */
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 150, 59, 0.03) 0%, transparent 70%),
+    linear-gradient(180deg, #ffffff 0%, #fafaf8 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
+/* ------------------------------------------------------------------ */
+/*  Selection                                                          */
+/* ------------------------------------------------------------------ */
 ::selection {
-  background: var(--color-accent);
-  color: #fff;
+  background: rgba(201, 150, 59, 0.2);
+  color: var(--color-foreground);
 }
 
+/* ------------------------------------------------------------------ */
+/*  Accessibility                                                      */
+/* ------------------------------------------------------------------ */
 .skip-to-content {
   position: absolute;
   left: -9999px;
   top: 0;
   z-index: 100;
   padding: 0.75rem 1.5rem;
-  background: var(--color-accent);
-  color: #fff;
+  background: var(--color-foreground);
+  color: #ffffff;
   font-weight: 600;
   font-size: 0.875rem;
   border-radius: 0 0 0.5rem 0;
+  transition: left 0.15s ease;
 }
 
 .skip-to-content:focus {
@@ -48,4 +119,88 @@ body {
 *:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Utility: Text gradients                                            */
+/* ------------------------------------------------------------------ */
+.text-gradient-gold {
+  background: var(--gradient-gold-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-brand {
+  background: linear-gradient(135deg, var(--color-foreground) 0%, var(--color-muted) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Utility: Glass effects                                             */
+/* ------------------------------------------------------------------ */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px) saturate(1.5);
+  -webkit-backdrop-filter: blur(12px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px) saturate(1.5);
+  -webkit-backdrop-filter: blur(12px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-accent {
+  background: rgba(201, 150, 59, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 150, 59, 0.12);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Utility: Shadows                                                   */
+/* ------------------------------------------------------------------ */
+.shadow-subtle {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.25s ease;
+}
+
+.shadow-card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+
+.shadow-elevated {
+  box-shadow: var(--shadow-xl);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Utility: Gradient backgrounds                                      */
+/* ------------------------------------------------------------------ */
+.bg-gradient-brand {
+  background: var(--gradient-brand);
+}
+
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.bg-gradient-surface {
+  background: var(--gradient-surface);
+}
+
+.bg-gradient-cta {
+  background: var(--gradient-cta);
 }

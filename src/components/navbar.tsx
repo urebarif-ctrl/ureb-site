@@ -16,7 +16,7 @@ export function Navbar() {
 
   return (
     <nav
-      className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-border"
+      className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-border"
       aria-label="Main navigation"
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -28,19 +28,19 @@ export function Navbar() {
           UREB<span className="text-accent">.</span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-7">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-muted hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {l.label}
             </Link>
           ))}
           <Link
             href="/contact"
-            className="bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-accent-hover transition-colors"
+            className="bg-foreground text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-foreground-secondary transition-colors"
           >
             Book a Call
           </Link>
@@ -48,47 +48,28 @@ export function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2"
+          className="md:hidden p-2 -mr-2"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             {open ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
       </div>
 
       {open && (
-        <div
-          className="md:hidden border-t border-border bg-white px-6 py-4 space-y-3"
-          role="menu"
-        >
+        <div className="md:hidden border-t border-border bg-white px-6 py-4 space-y-1" role="menu">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block text-sm font-medium text-muted hover:text-foreground"
+              className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
               role="menuitem"
             >
               {l.label}
@@ -97,7 +78,7 @@ export function Navbar() {
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="block bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg text-center hover:bg-accent-hover transition-colors"
+            className="block mt-3 bg-foreground text-white text-sm font-semibold px-5 py-3 rounded-lg text-center"
             role="menuitem"
           >
             Book a Call

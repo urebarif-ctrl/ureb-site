@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/json-ld";
 import { ContactForm } from "@/components/contact-form";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, SITE_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact — Book a Free Strategy Call",
@@ -177,7 +177,7 @@ export default function Contact() {
                   <div>
                     <p className="font-semibold text-sm">Location</p>
                     <p className="text-sm text-muted">
-                      Miami, FL — Serving businesses across the United States
+                      Karachi, PK — Serving US, UK, UAE & international businesses
                     </p>
                   </div>
                 </div>

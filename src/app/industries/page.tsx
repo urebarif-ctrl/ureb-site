@@ -269,7 +269,7 @@ export default function Industries() {
         </div>
       </section>
 
-      <section className="bg-foreground py-20" aria-label="Call to action">
+      <section className="bg-gradient-cta py-20" aria-label="Call to action">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-[family-name:var(--font-jakarta)] text-3xl font-extrabold text-white tracking-tight mb-4">
             Different industry? Let&apos;s talk.

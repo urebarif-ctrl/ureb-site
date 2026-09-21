@@ -22,6 +22,7 @@ const services = [
   {
     title: "Meta Ads Management",
     subtitle: "Facebook & Instagram Advertising for US Businesses",
+    href: "/services/meta-ads",
     features: [
       "Campaign strategy and audience architecture for US markets",
       "Custom and lookalike audience building from your CRM data",
@@ -36,6 +37,7 @@ const services = [
   {
     title: "Google Ads / PPC Management",
     subtitle: "Search, Display, Shopping & YouTube Campaigns",
+    href: "/services/google-ads",
     features: [
       "Search and display campaign setup targeting US audiences",
       "Shopping and Performance Max campaigns for ecommerce",
@@ -50,6 +52,7 @@ const services = [
   {
     title: "SEO & Organic Growth",
     subtitle: "Sustainable US Traffic That Compounds Over Time",
+    href: "/services/seo",
     features: [
       "Technical SEO audit and fixes (Core Web Vitals, schema markup)",
       "On-page optimization (titles, metas, heading structure)",
@@ -64,6 +67,7 @@ const services = [
   {
     title: "Growth Consulting",
     subtitle: "Fractional CMO / Growth Lead for US Companies",
+    href: "/services/growth-consulting",
     features: [
       "Full marketing strategy review and competitive analysis",
       "Channel mix and budget allocation across paid and organic",
@@ -154,16 +158,17 @@ export default function Services() {
 
           <div className="space-y-8">
             {services.map((s, i) => (
-              <article
+              <Link
                 key={s.title}
-                className="border border-border rounded-2xl overflow-hidden hover:border-accent transition-colors"
+                href={s.href}
+                className="block border border-border rounded-2xl overflow-hidden hover:border-accent transition-colors group"
               >
                 <div className="grid md:grid-cols-3">
                   <div className="bg-surface p-8 md:p-10 flex flex-col justify-center">
                     <span className="text-accent text-xs font-bold uppercase tracking-widest mb-2">
                       0{i + 1}
                     </span>
-                    <h2 className="font-[family-name:var(--font-jakarta)] text-2xl font-extrabold mb-1">
+                    <h2 className="font-[family-name:var(--font-jakarta)] text-2xl font-extrabold mb-1 group-hover:text-accent transition-colors">
                       {s.title}
                     </h2>
                     <p className="text-sm text-muted">{s.subtitle}</p>
@@ -197,7 +202,7 @@ export default function Services() {
                     </p>
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -284,19 +289,19 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="bg-foreground py-20" aria-label="Call to action">
+      <section className="bg-gradient-cta py-20" aria-label="Call to action">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-[family-name:var(--font-jakarta)] text-3xl font-extrabold text-white tracking-tight mb-4">
             Not sure which service fits your business?
           </h2>
-          <p className="text-gray-400 text-lg mb-8">
+          <p className="text-slate-400 text-lg mb-8">
             Book a free 30-minute strategy call. I&apos;ll audit your current
             setup and tell you exactly where the revenue opportunity is — no
             obligation, no pitch.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-accent text-white font-bold px-10 py-4 rounded-lg hover:bg-accent-hover transition-colors"
+            className="inline-flex items-center gap-2 bg-accent text-white font-bold px-10 py-4 rounded-xl hover:bg-accent-hover transition-all duration-200"
           >
             Book a Free Strategy Call
           </Link>
