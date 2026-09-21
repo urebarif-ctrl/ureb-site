@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { SkillBar } from "@/components/skill-bar";
+import { CountUp } from "@/components/count-up";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -183,10 +185,44 @@ export default function About() {
         </div>
       </section>
 
-      {/* ─── Skills ─── */}
-      <section className="bg-surface border-y border-border py-20 md:py-28" aria-labelledby="skills-heading">
-        <div className="max-w-4xl mx-auto px-6">
+      {/* ─── Numbers ─── */}
+      <section className="border-y border-border bg-white py-14" aria-label="Key numbers">
+        <div className="max-w-5xl mx-auto px-6">
           <ScrollReveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div className="group">
+                <p className="font-[family-name:var(--font-jakarta)] text-4xl md:text-5xl font-extrabold text-foreground group-hover:text-accent transition-colors">
+                  <CountUp end={100} suffix="+" duration={2200} />
+                </p>
+                <p className="text-xs text-muted mt-2 uppercase tracking-wider font-medium">Brands Served</p>
+              </div>
+              <div className="group">
+                <p className="font-[family-name:var(--font-jakarta)] text-4xl md:text-5xl font-extrabold text-foreground group-hover:text-accent transition-colors">
+                  <CountUp end={7} suffix="+" duration={1500} />
+                </p>
+                <p className="text-xs text-muted mt-2 uppercase tracking-wider font-medium">Years Experience</p>
+              </div>
+              <div className="group">
+                <p className="font-[family-name:var(--font-jakarta)] text-4xl md:text-5xl font-extrabold text-foreground group-hover:text-accent transition-colors">
+                  <CountUp end={2} prefix="$" suffix="M+" duration={1800} />
+                </p>
+                <p className="text-xs text-muted mt-2 uppercase tracking-wider font-medium">Ad Spend Managed</p>
+              </div>
+              <div className="group">
+                <p className="font-[family-name:var(--font-jakarta)] text-4xl md:text-5xl font-extrabold text-foreground group-hover:text-accent transition-colors">
+                  <CountUp end={17} suffix="K+" duration={2000} />
+                </p>
+                <p className="text-xs text-muted mt-2 uppercase tracking-wider font-medium">LinkedIn Followers</p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ─── Skills ─── */}
+      <section className="bg-surface border-b border-border py-20 md:py-28" aria-labelledby="skills-heading">
+        <div className="max-w-4xl mx-auto px-6">
+          <ScrollReveal variant="blur">
             <div className="text-center mb-14">
               <p className="text-accent font-semibold text-xs uppercase tracking-widest mb-3">Expertise</p>
               <h2 id="skills-heading" className="font-[family-name:var(--font-jakarta)] text-3xl md:text-4xl font-extrabold tracking-tight">
@@ -194,22 +230,9 @@ export default function About() {
               </h2>
             </div>
           </ScrollReveal>
-          <div className="space-y-6">
+          <div className="space-y-7">
             {skills.map((s, i) => (
-              <ScrollReveal key={s.name} delay={i * 80}>
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-sm font-semibold">{s.name}</span>
-                    <span className="text-sm text-muted">{s.level}%</span>
-                  </div>
-                  <div className="w-full h-2 bg-border rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-accent rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${s.level}%` }}
-                    />
-                  </div>
-                </div>
-              </ScrollReveal>
+              <SkillBar key={s.name} name={s.name} level={s.level} delay={i * 120} />
             ))}
           </div>
         </div>

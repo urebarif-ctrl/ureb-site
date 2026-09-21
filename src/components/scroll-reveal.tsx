@@ -5,7 +5,7 @@ import { useEffect, useRef, type ReactNode } from "react";
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
-  variant?: "up" | "left" | "right" | "scale";
+  variant?: "up" | "left" | "right" | "scale" | "blur";
   delay?: number;
   stagger?: boolean;
 }
@@ -37,14 +37,14 @@ export function ScrollReveal({
     return () => observer.disconnect();
   }, []);
 
-  const baseClass =
-    variant === "left"
-      ? "reveal-left"
-      : variant === "right"
-        ? "reveal-right"
-        : variant === "scale"
-          ? "reveal-scale"
-          : "reveal";
+  const variantMap: Record<string, string> = {
+    up: "reveal",
+    left: "reveal-left",
+    right: "reveal-right",
+    scale: "reveal-scale",
+    blur: "reveal-blur",
+  };
+  const baseClass = variantMap[variant] || "reveal";
 
   return (
     <div

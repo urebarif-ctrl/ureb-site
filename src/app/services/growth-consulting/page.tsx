@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -117,14 +118,17 @@ export default function GrowthConsulting() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-20">
-            {features.map((f) => (
-              <div key={f.title} className="border border-border rounded-xl p-7 hover:border-accent-muted transition-colors">
+            {features.map((f, i) => (
+              <ScrollReveal key={f.title} delay={i * 100} variant="blur">
+              <div className="border border-border rounded-xl p-7 hover:border-accent-muted transition-colors card-hover">
                 <h3 className="font-[family-name:var(--font-jakarta)] font-bold text-lg mb-2">{f.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{f.desc}</p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
 
+          <ScrollReveal variant="blur">
           <div className="bg-surface border border-border rounded-2xl p-8 md:p-12 mb-20">
             <h2 className="font-[family-name:var(--font-jakarta)] text-2xl font-extrabold mb-3">Ideal for</h2>
             <p className="text-muted leading-relaxed">
@@ -134,6 +138,7 @@ export default function GrowthConsulting() {
               their next growth phase.
             </p>
           </div>
+          </ScrollReveal>
 
           <div className="max-w-3xl">
             <h2 className="font-[family-name:var(--font-jakarta)] text-2xl font-extrabold mb-8">Frequently Asked Questions</h2>
@@ -158,7 +163,7 @@ export default function GrowthConsulting() {
             Book a free call. Let&apos;s talk about where your marketing is today
             and what strategic leadership could unlock.
           </p>
-          <Link href="/contact" className="btn-shine inline-flex items-center gap-2 bg-white text-foreground font-bold px-10 py-4 rounded-xl hover:bg-zinc-100 transition-all duration-300 hover:-translate-y-0.5 shadow-lg">
+          <Link href="/contact" className="btn-shine inline-flex items-center gap-2 bg-white text-foreground font-bold px-10 py-4 rounded-xl hover:bg-zinc-100 transition-all duration-300 hover:-translate-y-0.5 shadow-lg animate-glow">
             Book a Free Strategy Call
           </Link>
         </div>

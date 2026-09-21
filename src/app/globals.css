@@ -300,3 +300,93 @@ body {
 .gradient-border:hover::before {
   opacity: 1;
 }
+
+/* ── Animated gradient text ──────────────────────────────── */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.text-gradient-animated {
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 25%, #a78bfa 50%, #8b5cf6 75%, #6366f1 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+/* ── Float animations (varied paths & speeds) ────────────── */
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(8px, -16px) rotate(2deg); }
+  50% { transform: translate(-4px, -28px) rotate(-1deg); }
+  75% { transform: translate(12px, -12px) rotate(1deg); }
+}
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(-12px, -20px); }
+  66% { transform: translate(8px, -8px); }
+}
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-6px, -14px) scale(1.1); }
+}
+.animate-float-1 { animation: float-1 6s ease-in-out infinite; }
+.animate-float-2 { animation: float-2 8s ease-in-out infinite; }
+.animate-float-3 { animation: float-3 5s ease-in-out infinite; }
+
+/* ── Slow spin ────────────────────────────────────────────── */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
+
+/* ── Glow pulse ───────────────────────────────────────────── */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 4px 15px rgba(99, 102, 241, 0.15), 0 0 40px rgba(99, 102, 241, 0.05); }
+  50% { box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.1); }
+}
+.animate-glow { animation: glow 3s ease-in-out infinite; }
+
+/* ── Reveal with blur ─────────────────────────────────────── */
+.reveal-blur {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(6px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-blur.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* ── Extended stagger ─────────────────────────────────────── */
+.stagger > *:nth-child(7) { transition-delay: 480ms; }
+.stagger > *:nth-child(8) { transition-delay: 560ms; }
+.stagger > *:nth-child(9) { transition-delay: 640ms; }
+.stagger > *:nth-child(10) { transition-delay: 720ms; }
+
+/* ── Shimmer bar ──────────────────────────────────────────── */
+@keyframes shimmer-bar {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+.bar-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer-bar 2.5s ease-in-out infinite;
+}
+
+/* ── Stat card border animation ───────────────────────────── */
+@keyframes border-pulse {
+  0%, 100% { border-color: rgba(99, 102, 241, 0.1); }
+  50% { border-color: rgba(99, 102, 241, 0.3); }
+}
+.animate-border-pulse { animation: border-pulse 3s ease-in-out infinite; }

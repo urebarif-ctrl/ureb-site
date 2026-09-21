@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -118,11 +119,13 @@ export default function GoogleAds() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-20">
-            {features.map((f) => (
-              <div key={f.title} className="border border-border rounded-xl p-7 hover:border-accent-muted transition-colors">
+            {features.map((f, i) => (
+              <ScrollReveal key={f.title} delay={i * 100} variant="blur">
+              <div className="border border-border rounded-xl p-7 hover:border-accent-muted transition-colors card-hover">
                 <h3 className="font-[family-name:var(--font-jakarta)] font-bold text-lg mb-2">{f.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{f.desc}</p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
 
@@ -152,6 +155,7 @@ export default function GoogleAds() {
 
       <section className="bg-gradient-cta py-20" aria-label="Call to action">
         <div className="max-w-3xl mx-auto px-6 text-center">
+          <ScrollReveal variant="blur">
           <h2 className="font-[family-name:var(--font-jakarta)] text-3xl font-extrabold text-white tracking-tight mb-4">
             Want better results from Google Ads?
           </h2>
@@ -159,9 +163,10 @@ export default function GoogleAds() {
             Book a free strategy call. I&apos;ll review your campaigns and show
             you where you&apos;re leaving money on the table.
           </p>
-          <Link href="/contact" className="btn-shine inline-flex items-center gap-2 bg-white text-foreground font-bold px-10 py-4 rounded-xl hover:bg-zinc-100 transition-all duration-300 hover:-translate-y-0.5 shadow-lg">
+          <Link href="/contact" className="btn-shine inline-flex items-center gap-2 bg-white text-foreground font-bold px-10 py-4 rounded-xl hover:bg-zinc-100 transition-all duration-300 hover:-translate-y-0.5 shadow-lg animate-glow">
             Book a Free Strategy Call
           </Link>
+          </ScrollReveal>
         </div>
       </section>
     </>
