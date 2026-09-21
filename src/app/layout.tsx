@@ -3,8 +3,9 @@ import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 import { JsonLd } from "@/components/json-ld";
-import { SITE_URL, SITE_NAME } from "@/lib/constants";
+import { SITE_URL, SITE_NAME, LINKEDIN_URL, UPWORK_URL } from "@/lib/constants";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -87,10 +88,10 @@ const personSchema = {
   jobTitle: "Growth & Performance Marketing Consultant",
   description:
     "Independent growth marketing consultant specializing in Meta Ads, Google PPC, SEO, and lead generation for US businesses.",
-  email: "launchifye@mail.tradexsys.net",
+  email: "hello@urebarif.com",
   sameAs: [
-    "https://www.linkedin.com/in/ureb-arif-digital-marketing-seo/",
-    "https://www.upwork.com/freelancers/digitalmarketingandseo",
+    LINKEDIN_URL,
+    UPWORK_URL,
   ],
   knowsAbout: [
     "Meta Ads",
@@ -153,6 +154,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -34,7 +34,7 @@ export function ContactForm() {
       .filter(Boolean)
       .join("\n");
 
-    window.location.href = `mailto:launchifye@mail.tradexsys.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:hello@urebarif.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   }
 
@@ -203,10 +203,10 @@ export function ContactForm() {
       <p className="text-xs text-muted text-center">
         Or email me directly at{" "}
         <a
-          href="mailto:launchifye@mail.tradexsys.net"
+          href="mailto:hello@urebarif.com"
           className="text-accent hover:underline"
         >
-          launchifye@mail.tradexsys.net
+          hello@urebarif.com
         </a>
       </p>
     </form>
