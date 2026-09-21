@@ -41,6 +41,7 @@ export function Footer() {
                 { href: "/about", label: "About" },
                 { href: "/services", label: "Services" },
                 { href: "/case-studies", label: "Case Studies" },
+                { href: "/blog", label: "Blog" },
                 { href: "/industries", label: "Industries" },
                 { href: "/hire", label: "Hire on Upwork" },
                 { href: "/contact", label: "Contact" },
