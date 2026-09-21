@@ -294,14 +294,14 @@ export default function Services() {
           <h2 className="font-[family-name:var(--font-jakarta)] text-3xl font-extrabold text-white tracking-tight mb-4">
             Not sure which service fits your business?
           </h2>
-          <p className="text-slate-400 text-lg mb-8">
+          <p className="text-zinc-400 text-lg mb-8">
             Book a free 30-minute strategy call. I&apos;ll audit your current
             setup and tell you exactly where the revenue opportunity is — no
             obligation, no pitch.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-accent text-white font-bold px-10 py-4 rounded-xl hover:bg-accent-hover transition-all duration-200"
+            className="btn-shine inline-flex items-center gap-2 bg-white text-foreground font-bold px-10 py-4 rounded-xl hover:bg-zinc-100 transition-all duration-300 hover:-translate-y-0.5 shadow-lg"
           >
             Book a Free Strategy Call
           </Link>

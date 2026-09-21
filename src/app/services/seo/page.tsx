@@ -153,11 +153,11 @@ export default function SEO() {
           <h2 className="font-[family-name:var(--font-jakarta)] text-3xl font-extrabold text-white tracking-tight mb-4">
             Ready to invest in organic growth?
           </h2>
-          <p className="text-slate-400 text-lg mb-8">
+          <p className="text-zinc-400 text-lg mb-8">
             Book a free strategy call. I&apos;ll audit your current SEO and show
             you the quick wins and long-term opportunities.
           </p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-accent text-white font-bold px-10 py-4 rounded-xl hover:bg-accent-hover transition-all duration-200">
+          <Link href="/contact" className="btn-shine inline-flex items-center gap-2 bg-white text-foreground font-bold px-10 py-4 rounded-xl hover:bg-zinc-100 transition-all duration-300 hover:-translate-y-0.5 shadow-lg">
             Book a Free Strategy Call
           </Link>
         </div>

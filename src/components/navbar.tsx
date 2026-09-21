@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const links = [
   { href: "/", label: "Home" },
@@ -13,10 +13,21 @@ const links = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <nav
-      className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-border"
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/90 backdrop-blur-xl border-b border-border shadow-sm"
+          : "bg-white/60 backdrop-blur-md border-b border-transparent"
+      }`}
       aria-label="Main navigation"
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -33,14 +44,14 @@ export function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {l.label}
             </Link>
           ))}
           <Link
             href="/contact"
-            className="bg-foreground text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-foreground-secondary transition-colors"
+            className="btn-shine bg-foreground text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-foreground-secondary transition-all duration-200"
           >
             Book a Call
           </Link>
@@ -62,14 +73,19 @@ export function Navbar() {
         </button>
       </div>
 
-      {open && (
-        <div className="md:hidden border-t border-border bg-white px-6 py-4 space-y-1" role="menu">
+      <div
+        className={`md:hidden border-t border-border bg-white overflow-hidden transition-all duration-300 ${
+          open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+        }`}
+        role="menu"
+      >
+        <div className="px-6 py-4 space-y-1">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+              className="block py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               role="menuitem"
             >
               {l.label}
@@ -84,7 +100,7 @@ export function Navbar() {
             Book a Call
           </Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

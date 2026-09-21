@@ -154,11 +154,11 @@ export default function GrowthConsulting() {
           <h2 className="font-[family-name:var(--font-jakarta)] text-3xl font-extrabold text-white tracking-tight mb-4">
             Need marketing leadership?
           </h2>
-          <p className="text-slate-400 text-lg mb-8">
+          <p className="text-zinc-400 text-lg mb-8">
             Book a free call. Let&apos;s talk about where your marketing is today
             and what strategic leadership could unlock.
           </p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-accent text-white font-bold px-10 py-4 rounded-xl hover:bg-accent-hover transition-all duration-200">
+          <Link href="/contact" className="btn-shine inline-flex items-center gap-2 bg-white text-foreground font-bold px-10 py-4 rounded-xl hover:bg-zinc-100 transition-all duration-300 hover:-translate-y-0.5 shadow-lg">
             Book a Free Strategy Call
           </Link>
         </div>
