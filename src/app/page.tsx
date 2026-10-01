@@ -79,7 +79,7 @@ const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEn
 const webPageSchema = { "@context": "https://schema.org", "@type": "WebPage", name: "Ureb Arif — Growth & Performance Marketing Consultant", description: "Independent growth marketing consultant specializing in Meta Ads, Google PPC, SEO, and lead generation for US businesses.", url: SITE_URL, publisher: { "@type": "Person", name: "Ureb Arif" } };
 const serviceSchema = { "@context": "https://schema.org", "@type": "ProfessionalService", name: "Ureb Arif — Growth Marketing", description: "Performance marketing and lead generation services for US businesses.", url: SITE_URL, provider: { "@type": "Person", name: "Ureb Arif" }, areaServed: { "@type": "Country", name: "United States" }, serviceType: ["Meta Ads Management", "Google Ads PPC", "SEO", "Lead Generation", "Growth Consulting"] };
 
-// Photography-led personal brand refresh deployed to production.
+// Photography-led personal brand refresh — production sync.
 export default function Home() {
   return (
     <>
