@@ -84,7 +84,7 @@ const personSchema = {
   "@type": "Person",
   name: "Ureb Arif",
   url: SITE_URL,
-  image: `${SITE_URL}/ureb-headshot.jpg`,
+  image: `${SITE_URL}/images/ureb-neon-portrait.webp`,
   jobTitle: "Growth & Performance Marketing Consultant",
   description:
     "Independent growth marketing consultant specializing in Meta Ads, Google PPC, SEO, and lead generation for US businesses.",
