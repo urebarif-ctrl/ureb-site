@@ -252,6 +252,48 @@ export default function CaseStudies() {
         </div>
       </section>
 
+      {/* ─── Documented campaign proof ─── */}
+      <section className="py-16 md:py-20 bg-white border-y border-border" aria-labelledby="northcharge-proof-heading">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+            <ScrollReveal variant="scale" className="lg:col-span-3">
+              <div className="rounded-2xl overflow-hidden border border-border shadow-xl bg-surface">
+                <img
+                  src="/images/northcharge-meta-ads.webp"
+                  alt="NorthCharge Meta Ads campaign dashboard showing campaign results"
+                  width={900}
+                  height={480}
+                  loading="lazy"
+                  className="w-full h-auto"
+                />
+              </div>
+            </ScrollReveal>
+            <ScrollReveal variant="blur" delay={120} className="lg:col-span-2">
+              <p className="text-accent font-semibold text-xs uppercase tracking-widest mb-3">Campaign proof</p>
+              <h2 id="northcharge-proof-heading" className="font-[family-name:var(--font-jakarta)] text-3xl font-extrabold tracking-tight mb-4">
+                NorthCharge Meta Ads
+              </h2>
+              <p className="text-muted leading-relaxed mb-6">
+                A real account view from NorthCharge showing awareness and engagement campaigns I worked with. I prefer showing the dashboard alongside the story so the work feels documented, not generic.
+              </p>
+              <div className="grid grid-cols-2 gap-3 mb-5">
+                <div className="rounded-xl border border-border bg-surface p-4">
+                  <p className="font-[family-name:var(--font-jakarta)] text-2xl font-extrabold text-foreground">31,372</p>
+                  <p className="text-xs text-muted mt-1">Post engagements shown</p>
+                </div>
+                <div className="rounded-xl border border-border bg-surface p-4">
+                  <p className="font-[family-name:var(--font-jakarta)] text-2xl font-extrabold text-foreground">$0.004</p>
+                  <p className="text-xs text-muted mt-1">Cost per engagement shown</p>
+                </div>
+              </div>
+              <p className="text-xs text-muted-light">
+                Metrics above are transcribed from the campaign screenshot shown here and refer to the specific campaign row visible in the account.
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ─── Filter Pills ─── */}
       <section className="border-y border-border bg-white" aria-label="Filter case studies">
         <div className="max-w-6xl mx-auto px-6 py-6">
