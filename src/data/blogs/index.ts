@@ -4,8 +4,10 @@ import { googleAdsBlogs } from "./google-ads";
 import { seoBlogs } from "./seo";
 import { industryBlogs } from "./industry";
 import { strategyBlogs } from "./strategy";
+import { exteriorCleaningBlogs } from "./exterior-cleaning";
 
 const allBlogs: BlogPost[] = [
+  ...exteriorCleaningBlogs,
   ...metaAdsBlogs,
   ...googleAdsBlogs,
   ...seoBlogs,
