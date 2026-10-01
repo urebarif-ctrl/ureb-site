@@ -89,7 +89,7 @@ const profileSchema = {
     "@type": "Person",
     name: "Ureb Arif",
     url: `${SITE_URL}/about`,
-    image: `${SITE_URL}/ureb-headshot.jpg`,
+    image: `${SITE_URL}/images/ureb-neon-portrait.webp`,
     jobTitle: "Growth & Performance Marketing Consultant",
     description: "Independent growth consultant with 7+ years managing Meta Ads, Google PPC, and SEO for US businesses.",
     alumniOf: { "@type": "CollegeOrUniversity", name: "SZABIST" },
@@ -147,12 +147,12 @@ export default function About() {
                 <div className="flex justify-center">
                   <div className="relative">
                     <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-accent/10 to-transparent rotate-2" />
-                    <div className="relative w-52 h-52 rounded-2xl overflow-hidden border border-border shadow-xl">
+                    <div className="relative w-64 h-80 md:w-72 md:h-[23rem] rounded-2xl overflow-hidden border border-border shadow-xl">
                       <img
-                        src="/ureb-headshot.jpg"
+                        src="/images/ureb-japan-lantern.webp"
                         alt="Ureb Arif — Performance marketing consultant"
-                        width={208}
-                        height={208}
+                        width={560}
+                        height={840}
                         className="w-full h-full object-cover"
                       />
                     </div>
