@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/industries/exterior-cleaning", label: "Exterior Cleaning" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Blog" },
-  { href: "/industries", label: "Industries" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -41,7 +41,7 @@ export function Navbar() {
           UREB<span className="text-accent">.</span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-7">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -77,7 +77,7 @@ export function Navbar() {
 
       <div
         className={`md:hidden border-t border-border bg-white overflow-hidden transition-all duration-300 ${
-          open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-[34rem] opacity-100" : "max-h-0 opacity-0"
         }`}
         role="menu"
       >
