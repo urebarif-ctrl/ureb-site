@@ -150,8 +150,8 @@ export default function Home() {
                 <div className="relative">
                   <div className="absolute -inset-8 rounded-full border-2 border-dashed border-accent/15 animate-spin-slow" />
                   <div className="absolute -inset-16 rounded-full border border-accent/[0.07] animate-spin-slow" style={{ animationDirection: "reverse", animationDuration: "30s" }} />
-                  <div className="relative w-64 h-64 md:w-[19rem] md:h-[19rem] rounded-2xl overflow-hidden border-2 border-white/80 shadow-2xl">
-                    <img src="/ureb-headshot.jpg" alt="Ureb Arif — Growth and Performance Marketing Consultant" width={304} height={304} className="w-full h-full object-cover" />
+                  <div className="relative w-64 h-80 md:w-[19rem] md:h-[24rem] rounded-2xl overflow-hidden border-2 border-white/80 shadow-2xl">
+                    <img src="/images/ureb-neon-portrait.webp" alt="Ureb Arif — Growth and Performance Marketing Consultant" width={560} height={840} className="w-full h-full object-cover object-[50%_32%]" />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent" />
                   </div>
                   <div className="absolute -top-5 -right-5 bg-white shadow-xl rounded-xl px-4 py-2.5 animate-float-1 border border-border">
@@ -207,6 +207,49 @@ export default function Home() {
               </div>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ─── Personal visual story ─── */}
+      <section className="py-16 md:py-24 bg-surface border-b border-border" aria-labelledby="visual-story-heading">
+        <div className="max-w-6xl mx-auto px-6">
+          <ScrollReveal variant="blur">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
+              <div className="max-w-2xl">
+                <p className="text-accent font-semibold text-xs uppercase tracking-widest mb-3">Behind the strategy</p>
+                <h2 id="visual-story-heading" className="font-[family-name:var(--font-jakarta)] text-3xl md:text-4xl font-extrabold tracking-tight">
+                  Strategy is analytical. The person behind it should still feel human.
+                </h2>
+              </div>
+              <Link href="/about" className="text-sm font-semibold text-foreground hover:text-accent transition-colors inline-flex items-center gap-1 group">
+                More about me
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </Link>
+            </div>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-12 gap-4 md:gap-5">
+            <ScrollReveal variant="scale" className="md:col-span-5">
+              <div className="relative min-h-[520px] md:min-h-[620px] rounded-3xl overflow-hidden bg-foreground shadow-xl">
+                <img src="/images/ureb-neon-portrait.webp" alt="Ureb Arif in Japan" width={560} height={840} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-x-0 bottom-0 p-6 pt-24 bg-gradient-to-t from-black/80 to-transparent text-white">
+                  <p className="text-xs uppercase tracking-[0.2em] text-white/70 mb-2">Digital growth strategist</p>
+                  <p className="font-[family-name:var(--font-jakarta)] text-2xl font-bold">Numbers on the dashboard. Curiosity everywhere else.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+            <div className="md:col-span-7 grid sm:grid-cols-2 gap-4 md:gap-5">
+              <ScrollReveal variant="scale" delay={100}>
+                <div className="relative min-h-[360px] md:min-h-[620px] rounded-3xl overflow-hidden bg-foreground">
+                  <img src="/images/ureb-japan-lantern.webp" alt="Ureb Arif exploring Japan" width={560} height={840} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+                </div>
+              </ScrollReveal>
+              <ScrollReveal variant="scale" delay={180}>
+                <div className="relative min-h-[360px] md:min-h-[620px] rounded-3xl overflow-hidden bg-[#efe5c9]">
+                  <img src="/images/ureb-digital-growth.webp" alt="Ureb Arif — Your Digital Growth Strategist" width={900} height={1130} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
         </div>
       </section>
 
