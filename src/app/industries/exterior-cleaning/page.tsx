@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_URL } from "@/lib/constants";
-import { ExteriorHero, ProofStats, CaseStudyCards, BlogCluster, RelatedExteriorLinks, ExteriorCta, PillCloud } from "@/components/exterior-cleaning-specialist";\nimport { ExteriorCampaignProof } from "@/components/exterior-campaign-proof";
+import { ExteriorHero, ProofStats, CaseStudyCards, BlogCluster, RelatedExteriorLinks, ExteriorCta, PillCloud } from "@/components/exterior-cleaning-specialist";
+import { ExteriorCampaignProof } from "@/components/exterior-campaign-proof";
 
 export const metadata: Metadata = {
   title: "Exterior Cleaning Marketing Specialist | Meta Ads Media Buyer",
