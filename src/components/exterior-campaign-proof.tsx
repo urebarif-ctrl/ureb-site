@@ -16,8 +16,7 @@ const months = [
     rows: [
       ["Window Cleaning | ABO+", "60", "$9.76", "Off"],
       ["Window Cleaning | ABO+", "46", "$14.61", "Off"],
-      ["Pressure Washing", "31+", "Mixed", "Tested"],
-    ],
+          ],
   },
   {
     month: "August 2026",
