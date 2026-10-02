@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_URL } from "@/lib/constants";\nimport { SafeImage } from "@/components/safe-image";
+import { SITE_URL } from "@/lib/constants";
+import { SafeImage } from "@/components/safe-image";
 
 export const metadata: Metadata = {
   title: "Gallery | Ureb Arif",
