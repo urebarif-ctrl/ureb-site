@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL } from "@/lib/constants";\nimport { SafeImage } from "@/components/safe-image";
 
 export const metadata: Metadata = {
   title: "Gallery | Ureb Arif",
@@ -42,7 +42,7 @@ export default function GalleryPage() {
           <div className="grid auto-rows-[260px] gap-5 md:grid-cols-2 md:auto-rows-[360px]">
             {photos.map((photo, index) => (
               <a key={photo.src} href={photo.src} target="_blank" rel="noopener noreferrer" className={`group relative overflow-hidden rounded-3xl bg-surface shadow-sm ring-1 ring-border ${photo.size}`}>
-                <img src={photo.src} alt={photo.alt} loading={index === 0 ? "eager" : "lazy"} className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" />
+                <SafeImage src={photo.src} alt={photo.alt} loading={index === 0 ? "eager" : "lazy"} className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-6 pt-16">
                   <p className="text-sm font-bold text-white">{photo.label}</p>
                   <p className="mt-1 text-xs text-white/70">Open full image</p>
