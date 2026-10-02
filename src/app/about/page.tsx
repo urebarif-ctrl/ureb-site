@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/json-ld";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SkillBar } from "@/components/skill-bar";
 import { CountUp } from "@/components/count-up";
+import { SafeImage } from "@/components/safe-image";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -148,13 +149,7 @@ export default function About() {
                   <div className="relative">
                     <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-accent/10 to-transparent rotate-2" />
                     <div className="relative w-64 h-80 md:w-72 md:h-[23rem] rounded-2xl overflow-hidden border border-border shadow-xl">
-                      <img
-                        src="/images/ureb-japan-lantern.webp"
-                        alt="Ureb Arif — Performance marketing consultant"
-                        width={560}
-                        height={840}
-                        className="w-full h-full object-cover"
-                      />
+                      <SafeImage src="/images/ureb-japan-lantern.webp" alt="Ureb Arif photographed during travel" loading="eager" className="w-full h-full object-cover" />
                     </div>
                   </div>
                 </div>
@@ -164,7 +159,7 @@ export default function About() {
                   <h3 className="font-[family-name:var(--font-jakarta)] font-bold text-lg mb-6">Quick Facts</h3>
                   <div className="space-y-4">
                     {[
-                      { label: "Based in", value: "Karachi, PK — Serving US, UK, UAE" },
+                      { label: "Markets served", value: "US, UK, UAE and international" },
                       { label: "Education", value: "MBA, SZABIST (Digital Media)" },
                       { label: "Upwork", value: "Top Rated Freelancer" },
                       { label: "LinkedIn", value: "17,000+ followers" },
