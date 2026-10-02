@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/json-ld";
 import { FormSwitcher } from "@/components/form-switcher";
-import { SITE_URL, SITE_EMAIL, SITE_PHONE, SITE_WHATSAPP, LINKEDIN_URL, UPWORK_URL } from "@/lib/constants";
+import { SITE_URL, SITE_EMAIL, SITE_PHONE, LINKEDIN_URL, UPWORK_URL } from "@/lib/constants";\nimport { WhatsAppCallbackTrigger } from "@/components/whatsapp-callback-trigger";
 
 export const metadata: Metadata = {
   title: "Contact — Book a Free Strategy Call",
@@ -157,9 +157,9 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-semibold text-sm">Location</p>
+                    <p className="font-semibold text-sm">Markets served</p>
                     <p className="text-sm text-muted">
-                      Karachi, PK — Serving US, UK, UAE & international businesses
+                      US, UK, UAE and international businesses
                     </p>
                   </div>
                 </div>
