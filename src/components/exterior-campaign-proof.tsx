@@ -3,6 +3,9 @@ const months = [
     month: "June 2026",
     total: "124 visible leads",
     cpl: "$12.05 visible CPL",
+    image: "/images/proof/exterior-cleaning-june.svg",
+    image: "/images/proof/exterior-cleaning-july.svg",
+    image: "/images/proof/exterior-cleaning-august.svg",
     rows: [
       ["Window Cleaning | ABO+", "87", "$10.39", "Off"],
       ["Window Cleaning | ABO+", "26", "$17.42", "Off"],
@@ -40,7 +43,7 @@ export function ExteriorCampaignProof() {
             Real Meta Ads Manager captures, translated into readable proof.
           </h2>
           <p className="mt-5 text-muted leading-relaxed">
-            The underlying June, July and August 2026 Meta Ads Manager screenshots are client-safe captures with account identifiers redacted. I have kept the visible campaign context, lead counts and cost-per-lead figures while removing client identity.
+            The June, July and August 2026 proof below is recreated directly from client-safe Meta Ads Manager captures with account identifiers redacted. The visible campaign context, lead counts and cost-per-lead figures are retained while client identity stays private.
           </p>
         </div>
 
@@ -56,6 +59,8 @@ export function ExteriorCampaignProof() {
                   <div className="rounded-md bg-white px-2.5 py-1.5 text-[10px] font-semibold text-[#606770] ring-1 ring-[#ccd0d5]">Columns: Performance</div>
                 </div>
               </div>
+
+              <div className="border-b border-[#d7dbe0] bg-white p-3"><img src={month.image} alt={`${month.month} redacted Meta Ads campaign proof`} loading="lazy" className="w-full rounded-xl border border-[#e4e6eb]" /></div>
 
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[430px] border-collapse text-left text-[11px]">
