@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_URL } from "@/lib/constants";
 import { ExteriorHero, ProofStats, CaseStudyCards, BlogCluster, RelatedExteriorLinks, ExteriorCta } from "@/components/exterior-cleaning-specialist";
+import { ExteriorCampaignProof } from "@/components/exterior-campaign-proof";
 
 export const metadata: Metadata = {
   title: "Lead Meta Ads Media Buyer for 35+ Exterior Cleaning Accounts",
@@ -103,6 +104,8 @@ export default function ExteriorCleaning35AccountsCaseStudy() {
           </div>
         </div>
       </section>
+
+      <ExteriorCampaignProof />
 
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
