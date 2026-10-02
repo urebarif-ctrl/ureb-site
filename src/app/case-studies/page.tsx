@@ -294,6 +294,49 @@ export default function CaseStudies() {
         </div>
       </section>
 
+
+      {/* ─── Exterior cleaning documented proof ─── */}
+      <section className="py-16 md:py-20 bg-surface/70 border-b border-border" aria-labelledby="exterior-proof-heading">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+            <ScrollReveal variant="scale" className="lg:col-span-3">
+              <div className="rounded-2xl overflow-hidden border border-border shadow-xl bg-white">
+                <img
+                  src="/images/proof/exterior-cleaning-june.svg"
+                  alt="Exterior cleaning dashboard proof recreated from a redacted June 2026 Meta Ads Manager capture"
+                  width={1100}
+                  height={620}
+                  loading="lazy"
+                  className="w-full h-auto"
+                />
+              </div>
+            </ScrollReveal>
+            <ScrollReveal variant="blur" delay={120} className="lg:col-span-2">
+              <p className="text-accent font-semibold text-xs uppercase tracking-widest mb-3">Exterior cleaning dashboard proof</p>
+              <h2 id="exterior-proof-heading" className="font-[family-name:var(--font-jakarta)] text-3xl font-extrabold tracking-tight mb-4">
+                35+ accounts, with campaign evidence
+              </h2>
+              <p className="text-muted leading-relaxed mb-6">
+                The exterior cleaning portfolio now includes redacted June, July and August 2026 campaign proof plus the public client review for the 35+ account media-buying engagement.
+              </p>
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="rounded-xl border border-border bg-white p-4">
+                  <p className="font-[family-name:var(--font-jakarta)] text-2xl font-extrabold">448</p>
+                  <p className="text-xs text-muted mt-1">Visible leads in the case-study sample</p>
+                </div>
+                <div className="rounded-xl border border-border bg-white p-4">
+                  <p className="font-[family-name:var(--font-jakarta)] text-2xl font-extrabold">$13.32</p>
+                  <p className="text-xs text-muted mt-1">Visible average CPL</p>
+                </div>
+              </div>
+              <Link href="/case-studies/exterior-cleaning-448-visible-leads" className="inline-flex items-center gap-2 font-semibold text-accent hover:underline">
+                View exterior cleaning proof <span aria-hidden="true">→</span>
+              </Link>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ─── Filter Pills ─── */}
       <section className="border-y border-border bg-white" aria-label="Filter case studies">
         <div className="max-w-6xl mx-auto px-6 py-6">
