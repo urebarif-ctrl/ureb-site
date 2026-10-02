@@ -223,8 +223,8 @@ export default function Home() {
                   Strategy is analytical. The person behind it should still feel human.
                 </h2>
               </div>
-              <Link href="/about" className="text-sm font-semibold text-foreground hover:text-accent transition-colors inline-flex items-center gap-1 group">
-                More about me
+              <Link href="/gallery" className="text-sm font-semibold text-foreground hover:text-accent transition-colors inline-flex items-center gap-1 group">
+                View photo gallery
                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
             </div>
