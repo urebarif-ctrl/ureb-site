@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/json-ld";
 import { FormSwitcher } from "@/components/form-switcher";
-import { SITE_URL, SITE_EMAIL, SITE_PHONE, LINKEDIN_URL, UPWORK_URL } from "@/lib/constants";\nimport { WhatsAppCallbackTrigger } from "@/components/whatsapp-callback-trigger";
+import { SITE_URL, SITE_EMAIL, SITE_PHONE, LINKEDIN_URL, UPWORK_URL } from "@/lib/constants";
+import { WhatsAppCallbackTrigger } from "@/components/whatsapp-callback-trigger";
 
 export const metadata: Metadata = {
   title: "Contact — Book a Free Strategy Call",
