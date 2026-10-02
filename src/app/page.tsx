@@ -2,6 +2,7 @@ import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { CountUp } from "@/components/count-up";
+import { SafeImage } from "@/components/safe-image";
 import { SITE_URL } from "@/lib/constants";
 
 const services = [
@@ -152,7 +153,7 @@ export default function Home() {
                   <div className="absolute -inset-8 rounded-full border-2 border-dashed border-accent/15 animate-spin-slow" />
                   <div className="absolute -inset-16 rounded-full border border-accent/[0.07] animate-spin-slow" style={{ animationDirection: "reverse", animationDuration: "30s" }} />
                   <div className="relative w-64 h-80 md:w-[19rem] md:h-[24rem] rounded-2xl overflow-hidden border-2 border-white/80 shadow-2xl">
-                    <img src="/images/ureb-neon-portrait.webp" alt="Ureb Arif — Growth and Performance Marketing Consultant" width={560} height={840} className="w-full h-full object-cover object-[50%_32%]" />
+                    <SafeImage src="/images/ureb-neon-portrait.webp" alt="Ureb Arif, growth and performance marketing consultant" loading="eager" className="w-full h-full object-cover object-[50%_32%]" />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent" />
                   </div>
                   <div className="absolute -top-5 -right-5 bg-white shadow-xl rounded-xl px-4 py-2.5 animate-float-1 border border-border">
@@ -231,7 +232,7 @@ export default function Home() {
           <div className="grid md:grid-cols-12 gap-4 md:gap-5">
             <ScrollReveal variant="scale" className="md:col-span-5">
               <div className="relative min-h-[520px] md:min-h-[620px] rounded-3xl overflow-hidden bg-foreground shadow-xl">
-                <img src="/images/ureb-neon-portrait.webp" alt="Ureb Arif in Japan" width={560} height={840} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+                <SafeImage src="/images/ureb-japan-lantern.webp" alt="Ureb Arif photographed during travel in Japan" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-x-0 bottom-0 p-6 pt-24 bg-gradient-to-t from-black/80 to-transparent text-white">
                   <p className="text-xs uppercase tracking-[0.2em] text-white/70 mb-2">Digital growth strategist</p>
                   <p className="font-[family-name:var(--font-jakarta)] text-2xl font-bold">Numbers on the dashboard. Curiosity everywhere else.</p>
@@ -241,7 +242,7 @@ export default function Home() {
             <div className="md:col-span-7 grid sm:grid-cols-2 gap-4 md:gap-5">
               <ScrollReveal variant="scale" delay={100}>
                 <div className="relative min-h-[360px] md:min-h-[620px] rounded-3xl overflow-hidden bg-foreground">
-                  <img src="/images/ureb-japan-lantern.webp" alt="Ureb Arif exploring Japan" width={560} height={840} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+                  <SafeImage src="/images/ureb-japan-lantern.webp" alt="Ureb Arif photographed during travel in Japan" className="absolute inset-0 w-full h-full object-cover" />
                 </div>
               </ScrollReveal>
               <ScrollReveal variant="scale" delay={180}>
