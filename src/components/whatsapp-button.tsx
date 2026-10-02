@@ -13,6 +13,15 @@ export function WhatsAppButton() {
   }, []);
 
   useEffect(() => {
+    const openCallback = () => {
+      setStatus("idle");
+      setOpen(true);
+    };
+    window.addEventListener("open-whatsapp-callback", openCallback);
+    return () => window.removeEventListener("open-whatsapp-callback", openCallback);
+  }, []);
+
+  useEffect(() => {
     if (!open) return;
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setOpen(false);
