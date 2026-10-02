@@ -18,7 +18,6 @@ const photos = [
   { src: "/images/ureb-japan-lantern.webp", alt: "Ureb Arif photographed among illuminated lanterns", label: "Japan after dark", size: "md:row-span-2" },
   { src: "/images/ureb-neon-portrait.webp", alt: "Ureb Arif in a neon-lit street portrait", label: "Night portrait", size: "" },
   { src: "/images/ureb-digital-growth.webp", alt: "Ureb Arif digital growth strategist creative", label: "Digital growth strategist", size: "" },
-  { src: "/ureb-headshot.jpg", alt: "Professional portrait of Ureb Arif", label: "Professional portrait", size: "" },
 ];
 
 export default function GalleryPage() {
