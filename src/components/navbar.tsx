@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { BrandMark } from "@/components/brand-mark";
 
 const links = [
   { href: "/", label: "Home" },
@@ -10,6 +11,7 @@ const links = [
   { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -33,13 +35,7 @@ export function Navbar() {
       aria-label="Main navigation"
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-[family-name:var(--font-jakarta)] font-extrabold text-xl tracking-tight"
-          aria-label="Ureb Arif — Home"
-        >
-          UREB<span className="text-accent">.</span>
-        </Link>
+        <BrandMark />
 
         <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
