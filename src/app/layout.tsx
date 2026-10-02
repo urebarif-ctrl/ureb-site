@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/brand-icon.svg",
   },
   alternates: {
     canonical: SITE_URL,
