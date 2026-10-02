@@ -4,8 +4,6 @@ const months = [
     total: "124 visible leads",
     cpl: "$12.05 visible CPL",
     image: "/images/proof/exterior-cleaning-june.svg",
-    image: "/images/proof/exterior-cleaning-july.svg",
-    image: "/images/proof/exterior-cleaning-august.svg",
     rows: [
       ["Window Cleaning | ABO+", "87", "$10.39", "Off"],
       ["Window Cleaning | ABO+", "26", "$17.42", "Off"],
@@ -16,15 +14,17 @@ const months = [
     month: "July 2026",
     total: "157 visible leads",
     cpl: "$14.07 visible CPL",
+    image: "/images/proof/exterior-cleaning-july.svg",
     rows: [
       ["Window Cleaning | ABO+", "60", "$9.76", "Off"],
       ["Window Cleaning | ABO+", "46", "$14.61", "Off"],
-          ],
+    ],
   },
   {
     month: "August 2026",
     total: "167 visible leads",
     cpl: "$13.54 visible CPL",
+    image: "/images/proof/exterior-cleaning-august.svg",
     rows: [
       ["Window Cleaning | ABO+", "56", "$10.94", "Off"],
       ["Window Cleaning | ABO+", "26", "$12.32", "Off"],
